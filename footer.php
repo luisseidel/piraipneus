@@ -1,7 +1,7 @@
-<footer>
-    <p>Copyright &copy; 2017</p>
+<footer class="container">
+    <p>Copyright &copy; <?= date("Y"); ?></p>
 </footer>
 <?php wp_footer(); ?>
-</body>
 
+</body>
 </html>
