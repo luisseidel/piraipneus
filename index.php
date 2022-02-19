@@ -2,7 +2,7 @@
 
 <main>
 
-    <section class="container quem-somos" id="quem-somos">
+    <section class="quem-somos container" id="quem-somos">
         <h1>Quem Somos</h1>
 
         <?php
@@ -22,7 +22,7 @@
         <?php endforeach; ?>
     </section>
 
-    <section class="container servicos" id="servicos">
+    <section class="servicos container" id="servicos">
         <h1>Serviços</h1>
 
         <?php
@@ -47,7 +47,7 @@
         <?php endforeach; ?>
     </section>
 
-    <section class="container pneus" id="pneus">
+    <section class="pneus" id="pneus">
         <h1>Pneus</h1>
 
         <div class="glider-contain">
@@ -65,15 +65,13 @@
                 <?php endforeach; ?>
             </div>
 
-            <button aria-label="Previous" class="glider-prev">«</button>
-            <button aria-label="Next" class="glider-next">»</button>
             <div role="tablist" class="dots"></div>
         </div>
         
         
     </section>
 
-    <section class="container contato" id="contato">
+    <section class="contato container" id="contato">
         <h1>Contato</h1>
         <?= do_shortcode("[contact-form-7 id='15' title='Formulário de contato 1']"); ?>
     </section>

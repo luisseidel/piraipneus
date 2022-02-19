@@ -10,7 +10,7 @@
 
 <body <?php body_class(); ?>>
 
-    <header class="menu-mobile mobile w-100 container">
+    <header class="menu-mobile mobile container">
         <div class="menu">
             <button class="menu-btn" onclick="toggle()">
                 <i class="fa-solid fa-bars fa-2xl" aria-hidden="true"></i>
@@ -35,22 +35,22 @@
                 <div class="sidebar-main">
                     <ul>
                         <li>
-                            <a href="#quem-somos">
+                            <a href="#quem-somos" onclick="hide()">
                                 <p>Quem Somos</p>
                             </a>
                         </li>
                         <li>
-                            <a href="#servicos">
+                            <a href="#servicos" onclick="hide()">
                                 <p>Serviços</p>
                             </a>
                         </li>
                         <li>
-                            <a href="#pneus">
+                            <a href="#pneus" onclick="hide()">
                                 <p>Pneus</p>
                             </a>
                         </li>
                         <li>
-                            <a href="#contato">
+                            <a href="#contato" onclick="hide()">
                                 <p>Contato</p>
                             </a>
                         </li>
