@@ -14,13 +14,33 @@ function toggle() {
 	sidebar.classList.contains("visible") ? hide() : show();
 }
 
-document.addEventListener("DOMContentLoaded", function(){
+document.addEventListener("DOMContentLoaded", function() {
 
-	new Glider(document.querySelector('.glider'), {
-		slidesToShow: 1,
-		dots: '.dots',
-		draggable: true,
-		scrollLock: true,
-	});
+    if (document.querySelector('.slider-banner')) {
+        var slider = tns({
+            container: '.slider-banner',
+            items: 1,
+            slideBy: 'page',
+            autoplay: true,
+            controls: false,
+            nav: false,
+            autoplayButton: false,
+            autoplayButtonOutput: false,
+          });
+    }
+
+    if (document.querySelector('.slider-pneus')) {
+        var slider = tns({
+            container: '.slider-pneus',
+            items: 1,
+            slideBy: 'page',
+            autoplay: true,
+            controls: false,
+            nav: true,
+            navPosition: "bottom",
+            autoplayButton: false,
+            autoplayButtonOutput: false,
+          });
+    }
 
 });
