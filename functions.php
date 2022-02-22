@@ -14,8 +14,6 @@ function custom_theme() {
 }
 add_action("wp_enqueue_scripts", "custom_theme");
 
-add_theme_support( 'post-thumbnails' );
-
 function add_widget_Support() {
     register_sidebar(array(
         'name'          => 'Sidebar',
@@ -33,3 +31,14 @@ function add_Main_Nav() {
 }
 // Hook to the init action hook, run our navigation menu function
 add_action('init', 'add_Main_Nav');
+
+add_theme_support( 'custom-logo' );
+add_theme_support( 'custom-logo', array(
+	'height'      => 100,
+	'width'       => 400,
+	'flex-height' => true,
+	'flex-width'  => true,
+	'header-text' => array( 'site-title', 'site-description' ),
+) );
+
+add_theme_support( 'post-thumbnails' ); 

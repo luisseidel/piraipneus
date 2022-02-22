@@ -10,41 +10,47 @@
 
 <body <?php body_class(); ?>>
 
-    <header class="menu-mobile container">
-        <div class="menu mobile">
-            <button class="menu-btn" onclick="toggle()">
-                <i class="fa-solid fa-bars fa-2xl" aria-hidden="true"></i>
-            </button>
-        </div>
+    <header>
+        <div class="menu-mobile container">
+            <div class="menu mobile">
+                <button class="menu-btn" onclick="toggle()">
+                    <i class="fa-solid fa-bars fa-2xl" aria-hidden="true"></i>
+                </button>
+            </div>
 
-        <div class="logo-container">
-            <img class="logo" src="<?= (string) wp_get_attachment_url(5); ?>" alt="logo">
-        </div>
+            <div class="logo-container">
+                <?php
+                    $custom_logo_id = get_theme_mod( 'custom_logo' );
+                    $image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+                ?>
+                <img class="logo" src="<?= $image[0]; ?>" alt="logo">
+            </div>
 
-        <div class="links-container">
-            <div class="menu-links desktop">
-                <ul>
-                    <li>
-                        <a href="#quem-somos">
-                            <p>Quem Somos</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#servicos">
-                            <p>Serviços</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#pneus">
-                            <p>Pneus</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#contato">
-                            <p>Contato</p>
-                        </a>
-                    </li>
-                </ul>
+            <div class="links-container">
+                <div class="menu-links desktop">
+                    <ul>
+                        <li>
+                            <a href="#quem-somos">
+                                <p>Quem Somos</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#servicos">
+                                <p>Serviços</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#pneus">
+                                <p>Pneus</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#contato">
+                                <p>Contato</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </header>

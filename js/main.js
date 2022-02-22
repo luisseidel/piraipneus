@@ -23,6 +23,7 @@ document.addEventListener("DOMContentLoaded", function() {
             slideBy: 'page',
             autoplay: true,
             controls: false,
+            mouseDrag: true,
             nav: false,
             autoplayButton: false,
             autoplayButtonOutput: false,
@@ -33,14 +34,30 @@ document.addEventListener("DOMContentLoaded", function() {
         var slider = tns({
             container: '.slider-pneus',
             items: 1,
-            slideBy: 'page',
+            slideBy: 1,
             autoplay: true,
             controls: false,
+            mouseDrag: true,
             nav: true,
             navPosition: "bottom",
             autoplayButton: false,
             autoplayButtonOutput: false,
-          });
+            responsive: {
+                600: {
+                    edgePadding: 20,
+                    gutter: 20,
+                    items: 2,
+                    slideBy: 2,
+                },
+                700: {
+                    gutter: 30
+                },
+                900: {
+                    items: 3,
+                    slideBy: 3
+                },
+            }
+        });
     }
 
 });
