@@ -15,6 +15,29 @@ function toggle() {
 }
 
 document.addEventListener("DOMContentLoaded", function() {
+    var form = document.querySelector('.contato-form');
+    if (form) {
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            var phone = "5551981842396";
+            var nome = document.querySelector('#nome').value.trim();
+            var text = document.querySelector('#mensagem').value.trim();
+
+            if (nome == "" || text == "") {
+                window.alert("Preencha corretamente os campos!");
+                form.reset();
+                return;
+            }
+
+            var mensagem = `Nome: ${nome} Mensagem: ${text}`;
+            mensagem = encodeURIComponent(mensagem);
+            var link = `https://api.whatsapp.com/send?phone=${phone}&text=${mensagem}`;
+
+            window.open(link);
+            form.reset();
+        });
+    }
 
     if (document.querySelector('.slider-banner')) {
         var slider = tns({
@@ -30,34 +53,34 @@ document.addEventListener("DOMContentLoaded", function() {
           });
     }
 
-    if (document.querySelector('.slider-pneus')) {
-        var slider = tns({
-            container: '.slider-pneus',
-            items: 1,
-            slideBy: 1,
-            autoplay: true,
-            controls: false,
-            mouseDrag: true,
-            nav: true,
-            navPosition: "bottom",
-            autoplayButton: false,
-            autoplayButtonOutput: false,
-            responsive: {
-                600: {
-                    edgePadding: 20,
-                    gutter: 20,
-                    items: 2,
-                    slideBy: 2,
-                },
-                700: {
-                    gutter: 30
-                },
-                900: {
-                    items: 3,
-                    slideBy: 3
-                },
-            }
-        });
-    }
+    // if (document.querySelector('.slider-pneus')) {
+    //     var slider = tns({
+    //         container: '.slider-pneus',
+    //         items: 1,
+    //         slideBy: 1,
+    //         autoplay: true,
+    //         controls: false,
+    //         mouseDrag: true,
+    //         nav: true,
+    //         navPosition: "bottom",
+    //         autoplayButton: false,
+    //         autoplayButtonOutput: false,
+    //         responsive: {
+    //             600: {
+    //                 edgePadding: 20,
+    //                 gutter: 20,
+    //                 items: 2,
+    //                 slideBy: 2,
+    //             },
+    //             700: {
+    //                 gutter: 30
+    //             },
+    //             900: {
+    //                 items: 3,
+    //                 slideBy: 3
+    //             },
+    //         }
+    //     });
+    //}
 
 });
