@@ -124,6 +124,7 @@ header {
 hr {
     margin: 50px 0;
     border: 5px solid var(--red);
+    background: var(--red);
 }
 
 input, button, textarea {
@@ -449,12 +450,8 @@ footer div {
         gap: 10%;
     }
 
-    .pneus-flex {
-        justify-content: space-between;
-    }
-    
     .single-pneu img {
-        width: 290px;
+        width: 270px;
     }
 
     .links-container {
