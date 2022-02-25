@@ -4,10 +4,24 @@
 
     <section class="banners">
         <div class="banner-container">
-            <div class="slider-banner">
+            <div class="slider-banner mobile">
                 <?php
                     global $post;
-                    $args = array( 'numberposts' => 10, 'category_name' => 'banner' );
+                    $args = array( 'numberposts' => 5, 'category_name' => 'banner-mobile' );
+                    $posts = get_posts( $args );
+                    foreach( $posts as $post ): setup_postdata($post); 
+                ?>
+                    <div class="swiper-slide">
+                        <?php the_post_thumbnail(); ?>
+                    </div>
+                    
+                <?php endforeach; ?>
+            </div>
+
+            <div class="slider-banner desktop">
+                <?php
+                    global $post;
+                    $args = array( 'numberposts' => 5, 'category_name' => 'banner-desk' );
                     $posts = get_posts( $args );
                     foreach( $posts as $post ): setup_postdata($post); 
                 ?>
@@ -25,7 +39,7 @@
 
         <?php
             global $post;
-            $args = array( 'numberposts' => 10, 'category_name' => 'quem-somos' );
+            $args = array( 'numberposts' => 1, 'category_name' => 'quem-somos' );
             $posts = get_posts( $args );
             foreach( $posts as $post ): setup_postdata($post); 
         ?>
@@ -47,7 +61,7 @@
 
         <?php
             global $post;
-            $args = array( 'numberposts' => 10, 'category_name' => 'servicos' );
+            $args = array( 'numberposts' => 5, 'category_name' => 'servicos' );
             $posts = get_posts( $args );
             foreach( $posts as $post ): setup_postdata($post); 
         ?>
@@ -78,7 +92,7 @@
             <div class="pneus-flex mt-40">
                 <?php
                     global $post;
-                    $args = array( 'numberposts' => 10, 'category_name' => 'pneus' );
+                    $args = array( 'numberposts' => 15, 'category_name' => 'pneus' );
                     $posts = get_posts( $args );
                     foreach( $posts as $post ): setup_postdata($post); 
                 ?>

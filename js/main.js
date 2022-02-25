@@ -39,9 +39,23 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
-    if (document.querySelector('.slider-banner')) {
+    if (document.querySelector('.slider-banner.mobile')) {
         var slider = tns({
-            container: '.slider-banner',
+            container: '.slider-banner.mobile',
+            items: 1,
+            slideBy: 'page',
+            autoplay: true,
+            controls: false,
+            mouseDrag: true,
+            nav: false,
+            autoplayButton: false,
+            autoplayButtonOutput: false,
+          });
+    }
+
+    if (document.querySelector('.slider-banner.desktop')) {
+        var slider = tns({
+            container: '.slider-banner.desktop',
             items: 1,
             slideBy: 'page',
             autoplay: true,

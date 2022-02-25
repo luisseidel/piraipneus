@@ -436,6 +436,11 @@ footer div {
         max-width: 400px;
     }
 
+    .slider-banner .swiper-slide img {
+        height: 600px;
+        object-fit: 0 36%;
+    }
+
     .menu-mobile {
         height: 70px;
     }
