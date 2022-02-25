@@ -438,7 +438,7 @@ footer div {
 
     .slider-banner .swiper-slide img {
         height: 600px;
-        object-fit: 0 36%;
+        object-position: 0 36%;
     }
 
     .menu-mobile {
