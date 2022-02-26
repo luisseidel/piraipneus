@@ -26,6 +26,8 @@ html { scroll-behavior: smooth; }
 
 h1 {
     font: normal normal bolder 36px/36px 'Roboto', sans-serif;
+    text-align: center;
+    text-transform: uppercase;
 }
 
 h2 {
@@ -252,6 +254,10 @@ button:hover {
     margin-bottom: 40px;
 }
 
+.swiper-slide.tns-item.tns-slide-active {
+    height: 500px;
+}
+
 .slider-banner .swiper-slide img {
     max-width: 100%;
     height: 500px;
@@ -279,6 +285,22 @@ section:not(:first-child) {
     object-fit: contain;
     width: 130px;
     height: auto;
+}
+.whatsapp-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
+}
+.whatsapp-wide-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    max-width: 250px;
+    border-radius: 4px;
+    padding: 8px 16px;
+    background-color: var(--whatsapp);
 }
 
 .contato-form {
@@ -434,6 +456,10 @@ footer div {
 
     img {
         max-width: 400px;
+    }
+
+    .swiper-slide.tns-item.tns-slide-active {
+        height: 600px !important;
     }
 
     .slider-banner .swiper-slide img {
