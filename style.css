@@ -435,6 +435,7 @@ footer div {
 
 .bar img {
     max-height: 30px;
+    filter: brightness(2.5);
 }
 
 @media screen and (min-width: 600px) {

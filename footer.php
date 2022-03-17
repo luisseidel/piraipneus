@@ -53,16 +53,8 @@
             </div>
         </section>
 
-    <?php 
-        $url = wp_get_upload_dir();
-        $url = $url['url'] . "/luis_logo.png";
-    ?>
-
     <div class="bar">
         <p>Copyright &copy; <?= date("Y"); ?></p>
-        <a href="https://luisseidel.netlify.app/" target="_blank">
-            <img src="<?=$url?>" alt="luis">
-        </a>
     </div>
 
 </footer>
