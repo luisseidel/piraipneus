@@ -332,6 +332,38 @@ section:not(:first-child) {
     gap: 50px;
 }
 
+
+.cookie-consent {
+    margin: 0;
+    bottom: 0;
+    position: fixed;
+    background: var(--white);
+    padding: 8px;
+
+    display: flex;
+    display: -webkit-flex;
+    display: -webkit--box;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.cookie-consent.inactive {
+    display: none !important;
+}
+
+.cookie-content, .cookie-accept {
+    margin: 0;
+    color: black;
+}
+
+.cookie-accept button {
+    padding: 8px 16px;
+    color: white;
+    background: black;
+}
+
 footer {
     border-top: 10px solid var(--red);
 }
@@ -509,6 +541,14 @@ footer div {
         padding: 0;
         margin: 0 auto;
         max-width: 1200px;
+    }
+
+    .cookie-consent {
+        flex-direction: row;
+    }
+
+    .cookie-consent .cookie-content {
+        margin-right: 20px;
     }
 }
 
